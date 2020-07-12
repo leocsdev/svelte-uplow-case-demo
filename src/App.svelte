@@ -1,5 +1,5 @@
 <script>
-  let headTitle = 'Svelte Uppercase/Lowercase Demo';
+  let headTitle = 'Uppercase/Lowercase Conversion';
   let text = '';
   let textOutput = '';
 
