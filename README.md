@@ -2,15 +2,14 @@
 
 ---
 
-# svelte app
+# svelte-uplow-case-demo
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+This project is a template from [Svelte](https://svelte.dev)  It lives at https://github.com/sveltejs/template.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+#### Clone with HTTPS 
 
 ```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+git clone https://github.com/leocsdev/svelte-uplow-case-demo.git
 ```
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
@@ -21,7 +20,7 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd svelte-uplow-case-demo
 npm install
 ```
 
@@ -33,7 +32,7 @@ npm run dev
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+
 
 
 ## Building and running in production mode
