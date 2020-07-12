@@ -1,20 +1,25 @@
 <script>
   let headTitle = 'Svelte Uppercase/Lowercase Demo';
   let text = '';
+  let textOutput = '';
 
   function handleText(event) {
-    const textTyped = event.target.value;
-    text = textTyped;
+    text = event.target.value;
   }
 
   function handleLowerCase() {
     const lowerText = text.toLowerCase();
-    text = lowerText;
+    textOutput = lowerText;
   }
 
   function handleUpperCase() {
     const upperText = text.toUpperCase();
-    text = upperText;
+    textOutput = upperText;
+  }
+
+  function handleClear() {
+    text = '';
+    textOutput = '';
   }
 </script>
 
@@ -27,6 +32,7 @@
     cols="30"
     rows="10"
     on:input={handleText}
+    value={text}
     placeholder="Type here..." />
 
   <!-- Output Text -->
@@ -34,20 +40,22 @@
     name="text-output"
     cols="30"
     rows="10"
-    value={text}
+    value={textOutput}
     disabled
     placeholder="Output goes here" />
 
   <br />
 
   <!-- Buttons -->
-  <button on:click={handleLowerCase}>Lower Case</button>
-  <button on:click={handleUpperCase}>Upper Case</button>
-
+  <button on:click={handleLowerCase}>lowercase</button>
+  <button on:click={handleUpperCase}>UPPERCASE</button>
+  &nbsp; &nbsp;
+  <button on:click={handleClear}>Clear</button>
 </main>
 
 <style>
   main {
+    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -61,5 +69,18 @@
   textarea:disabled {
     background-color: white;
     color: black;
+  }
+
+  @media (max-width: 1200px) {
+    main {
+      margin: 0 5%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
   }
 </style>
